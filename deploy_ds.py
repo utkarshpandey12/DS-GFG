@@ -4,12 +4,7 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 
 def train_model():
-    import pandas as pd
-    import numpy as np
-
     from sklearn.datasets import load_breast_cancer
-    from sklearn.preprocessing import StandardScaler
-
     from keras.models import Sequential
     from keras.layers import Dense
     data = load_breast_cancer()
