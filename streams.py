@@ -345,18 +345,32 @@ fig
 
 #import streamlit as st
 
+
+############## Display text as a Header,Subheader,Title,Markdown,Caption demo
+
 #st.header('This is a header Text')
 #st.subheader('This is a subheader Text')
 #st.title('This is a title Text')
 #st.markdown('This is an example of  **MARKDOWN TEXT**.')
 #st.caption('This is a string that explains something above.')
 
+
+
+############## Embed Piece of code in your Webapp Demo
+
+
+
 #code = '''def hello():
      #print("Hello, Streamlit!")'''
 #st.code(code, language='python')
 
+############## Normal Text display demo
+
 
 #st.text('This is some text.')
+
+
+############## Embed Equations in your webapp demo
 
 #st.latex(r'''
      #a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
@@ -384,12 +398,19 @@ fig
 #import streamlit as st
 #import pandas as pd
 #import numpy as np
+
+
+############## Display Data as a Dataframe demo
+
 #df = pd.DataFrame(
     #np.random.randn(50, 20),
     #columns=('col %d' % i for i in range(20)))
 
 #st.dataframe(df)
 
+
+
+############## Display Data as a Metric demo
 
 #col1, col2, col3 = st.columns(3)
 #col1.metric("Temperature", "70 F", "1.2 F")
@@ -414,14 +435,27 @@ fig
 #import streamlit as st
 #import pandas as pd
 #import numpy as np
+
+##############  Line-Chart demo
+
+
 #chart_data = pd.DataFrame(
      #np.random.randn(20, 3),
      #columns=['a', 'b', 'c'])
 
 #st.line_chart(chart_data)
 
+
+
+##############  Area Chart demo
+
 #st.area_chart(chart_data)
 #st.bar_chart(chart_data)
+
+
+
+##############  Altair library chart demo
+
 
 #import altair as alt
 
@@ -461,14 +495,27 @@ fig
 
 #import streamlit as st
 
+
+############## Button demo
+
 #if st.button('Say hello'):
      #st.write('Why hello there')
 #else:
      #st.write('Goodbye')
 
 
+
+
+##############  Download Button demo
+
+
 #text_contents = '''This is some text'''
 #st.download_button('Download some text', text_contents)
+
+
+
+
+##############  Checkbox demo
 
 
 #agree = st.checkbox('I agree')
@@ -477,7 +524,7 @@ fig
      #st.write('Great!')
 
 
-
+##############  Radio button demo
 
 #genre = st.radio(
      #"What's your favorite movie genre",
@@ -509,6 +556,9 @@ fig
 ####################################### Media elements ######################################
 
 
+############## Loading iamge file demo
+
+
 #import streamlit as st
 #from PIL import Image
 #image = Image.open('sunrise.jpg')
@@ -516,11 +566,17 @@ fig
 #st.image(image, caption='Sunrise by the mountains')
 
 
+
+############## Loading Audio file demo
+
 #audio_file = open('myaudio.ogg', 'rb')
 #audio_bytes = audio_file.read()
 
 #st.audio(audio_bytes, format='audio/ogg')
 
+
+
+############## Loading Video file demo
 
 #video_file = open('myvideo.mp4', 'rb')
 #video_bytes = video_file.read()
@@ -543,4 +599,93 @@ fig
 
 
 
-####################################### Layouts and Containers  ######################################
+#######################################  SideBarLayouts   ######################################
+
+#import streamlit as st
+
+
+############## SideBar Layout demo
+
+#add_selectbox = st.sidebar.selectbox(
+    #"How would you like to be contacted?",
+    #("Email", "Home phone", "Mobile phone")
+#)
+
+
+#######################################  SideBarLayouts ENDS  ######################################
+
+
+
+
+
+
+
+
+
+
+
+
+#######################################  Display progress and status   ######################################
+
+#import time
+#import streamlit as st
+
+
+############## Progress bars demo
+#my_bar = st.progress(0)
+#for percent_complete in range(100):
+     #time.sleep(0.001)
+     #my_bar.progress(percent_complete + 1)
+
+
+############## Spinners demo
+
+
+#with st.spinner('Wait for it...'):
+    #time.sleep(5)
+#st.success('Done!')
+
+
+
+############## Ballons for celebration demo
+
+
+#st.balloons()
+
+
+
+
+############## error demo
+
+#st.error('This is an error')
+
+
+
+
+############## warning demo
+
+#st.warning('This is a warning')
+
+
+
+
+############## Info demo
+
+#st.info('This is a purely informational message')
+
+
+
+
+############## Success celebration demo
+
+#st.success('This is a success message!')
+
+
+
+
+############## Exception demo
+#e = RuntimeError('This is an exception of type RuntimeError')
+#st.exception(e)
+
+
+#######################################  Display progress and status ENDS   ######################################
