@@ -1,0 +1,8 @@
+credentials:
+  names: ['John Smith', 'Rebecca Briggs']
+  usernames: ['jsmith', 'rbriggs']
+  passwords: ['$2b$12$Le8g5IUNK/hbw47wISExj.QGV8/tGszGI/bcapcEA6eyjpq4d7/5i', '$2b$12$/35hk6uwvFx557EkEAJGH.wYfn1Y0VfwhHg87FPsDPdOzj/ORraM.'] # To be replaced with hashed passwords
+cookie:
+  name: 'storage'
+  key: 'njfedfiewifednfn'
+  expiry_days: 30
